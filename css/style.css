@@ -1,0 +1,363 @@
+/* -------CODIGO ESTANDAR CTRL C - CTRL V  -------*/
+* {
+    box-sizing: border-box;
+}
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #744D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000; 
+    --azul: #2b6ebb;
+    --azul_claro: #3378c7;
+    --text-color: hsl(0, 0%, 100%);
+    --background-color: black;
+}
+
+html {
+    box-sizing: border-box; /* Los padings no afectan el ancho de los elementos */
+    font-size: 62.5%; /* 1 rem = 10px */
+
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* ---------------------------------------------- */
+
+body {  /* Fuente- tamaño interlineado par el body (parrafos) */
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);
+}
+
+
+/* -----Codigo Globales-------- */
+
+.contenedor { /* Clase para centrar y hacer responsive el texto */
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a { /* Quita la linea debajo de todos los enlaces */
+    text-decoration: none;
+} 
+
+/* ------HEADINGS------- */
+h1, h2, h3, h4 { /* Fuente para todos los titulos o headings */
+    font-family: var(--fuenteHeading);
+    line-height: 1.2; /* Interlineado */
+}
+h1 {
+    font-size: 4.8rem;   
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+/* --------------------- */
+img {
+    max-width: 100%; /* Imagenes utilizan 100%  */
+    transition: .2s; /* Lo usaremos para suavizar la animación hover de todas las imágenes */
+}
+
+/* -----------UTILIDADES----------- */
+.no-margin {
+    margin: 0; 
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+    transition: .2s;
+}
+/* -------------------------------- */
+
+/* ----------HEADER---------------- */ 
+
+            /* WEPB */
+/*
+.webp .header {
+    background-image: url(../img/bici2.wepb); /* CARGA WEPB CUANDO EL NAVEGADOR LO SOPORTA 
+} */
+/*
+.no-wepb {
+    background-image: url(../img/bici2.jpg); /* CARGA JPG CUANDO EL NAVEGADOR NO SOPORTA WEPB 
+} */
+            /* ---- */
+.header {
+    background-image: url(../img/bici2.webp); /* Imagen fondo */
+    height: 60rem; /* Tamao imagen */
+    background-size: cover; /* Toma todo el espacio disponible */
+    background-repeat: no-repeat; /* No se repite la imagen */
+    background-position: center; /* La imagen fluye hacia el centro cuando se reduce la pantalla */
+}
+.header_texto { /* Clase Texto Al frente del header */
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 9rem; /* Separación del borde superior para centrarlo respecto a la imagen de fondo */
+}
+
+/* -------BARRA DE NAVEGACIÓN Y LOGO---------------*/
+@media (min-width: 768px) {  /* Media querie para organizar la barra de navegacion de vertical a horizontalmente */
+    .barra { 
+        display: flex; /* Las barras de navegacion es mejor con display flex */
+        justify-content: space-between; /* Separa el logo de la barra de navegación y los coloca a cada uno en un extremo centrados horizontalmente */
+        align-items: center; /* Alinea el logo y la barra en la misma linea horizontal */
+
+        
+    }
+
+}
+/* --------------LOGO HEADER----------------------- */
+
+.wrapper {
+    display: grid;
+    place-content: center;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.5rem, 1rem + 1.3vw, 15rem);
+    font-weight: 700;
+    color: var(--text-color);
+  }
+  
+  .wrapper > div {
+    grid-area: 1/1/-1/-1;
+  }
+  .top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  }
+  .bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, rgb(1, 95, 9) 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, rgb(4, 112, 28) 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+  }
+/* -------------------------------------------------------------------------- */  
+
+
+
+.logo {
+    color: var(--blanco); /* Color fuente */
+}
+.logo__nombre {
+    font-weight: 400; /* Tamaño Fuente normal  */
+}
+.logo__bold {
+    font-weight: 700; /* Negrita para el Expertos */
+}
+.barra {
+    padding: 3.5rem;
+}
+.navegacion__enlace {
+    display: block; /* Ordena la barra verticalmente, esto para ver en celular */
+    text-align: center; /* Centra horizontalmente */
+    font-size: 1.8 rem;
+    color: var(--blanco);
+}
+.navegacion {
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .navegacion {   /* Devuelve la horizolntalidad de la barra cuando se vea desde pc */
+        display: flex; 
+        gap: 2rem;
+    }
+}
+
+/* ------CONTENIDO PRINCIPAL (MAIN) -----------*/
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid; /* */
+        grid-template-columns: 2fr 1fr; /*Dispone el contenido principal en columnas.   Crea dos columnas 75% y  25% mas o menos */
+        column-gap: 4rem; /* Separación entre columnas */
+    }
+}
+/* ---------------------ENTRADAS----------------------------- */
+.entrada { /* Clase general para cada entrada del blog */
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .1); /* Crea la sombra alededor de cada entrada */
+    margin-bottom: 3rem; /* Separacion entre entradas */
+    transition: .2s;  /* Suaviza la animación con hover */
+    padding: .8rem .8rem 0 .8rem;
+}
+.entrada:last-of-type { /* Clase para seleccionar la última entrada y ente caso quitarle el borde */
+    border: none;
+    margin: 0;
+}
+
+.entrada:hover{ /* Animación de efecto dezplazamiento superior */
+    transform: translateX(4px);
+    box-shadow: 0 1px 14px 2px rgba(0, 0, 0, .1); /* Sombra más oscura cuando se pasa el cursor encima */
+
+}
+.entrada__contenido {
+    
+}
+.entrada__imagen { 
+    overflow: hidden; /*  Necesario para la animacion, cuando se pase el cursor dentro de la imagen la animacion no se salga de los bordes*/
+    cursor: pointer; /* Aparece la mano cuando se pasa sobre la imagen */
+}
+.entrada:hover .entrada__imagen-1, /* Animación para las imágenes de cada entrada */
+.entrada:hover .entrada__imagen-2,
+.entrada:hover .entrada__imagen-3,
+.entrada:hover .entrada__imagen-4{
+    transform: scale(1.1); 
+}
+.boton {  /* ESTILOS BOTON */
+    display: block; /* Permite modificar la posición del botón */
+    padding: 7px;
+    background: var(--azul);
+    color: var(--blanco);
+    margin: 0; /* Gracias a dislpay block elimina las márgenes */
+    text-align: center; 
+    font-family: var(--fuenteHeading);
+    font-weight: 700;
+    font-size: 1.9rem;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .1); /* Sombra del botón */
+    transition: .2s;
+    margin-bottom: 2rem;   
+    border: none;
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+.boton:hover {
+    background: var(--azul_claro);
+    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .2);
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+
+/* ---------ASIDE CURSOS----------- */
+.cursos {
+    list-style: none;
+}
+
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-curso__informacion {
+    font-weight: normal;
+}
+
+.widget-curso {
+    border-bottom: 1px solid var(--gris); /* Línea debajo de cada curso qe sirve para acentuar la separación */
+    margin-bottom: 2rem; 
+}
+
+.widget-curso:last-of-type {
+    border: none;
+    margin-bottom: none;
+}
+
+.widget-curso__label,
+.widget-curso__informacion {
+    font-size: 2rem;
+}
+
+/* ---------FOOOTER----------- */
+.footer {
+    background-color: var(--negro);
+    padding-bottom: 3rem 0;
+    margin-top: 4rem;
+}
+
+/* -----SOBRE MI--------- */
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+
+}
+
+
+/* ------CURSOS--------- */
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 3rem;
+    }
+    
+}
+
+.curso:last-of-type {
+    border: none;
+}
+
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.curso__info {
+    font-weight: normal;
+}
+
+
+
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+.curso__imagen--referencia {
+    border-radius: .5rem;
+}
+/* ---------CONTACTO-------- */
+.contacto-bg {
+    background-image: url(/img/Bici7.webp);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: .5rem;
+}
+
+/* -------FORMULARIO-------- */
+.formulario {
+    background-color: var(--blanco);
+    margin: -6rem auto 0 auto; /* Se dezplaza hacia arriba todo el formulario en 5rem */
+    width: 95%; /* Toma el 95% del espacio disponible */
+    padding: 5rem;
+    border-radius: .5rem;
+
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+
+}
+.campo__label {
+    flex: 0 0 9rem;
+
+}
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea {
+    height: 20rem;
+}

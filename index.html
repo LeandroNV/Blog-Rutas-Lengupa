@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas Lengupá</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- -PRELOAD- -->     <!-- Elementos que se van a cargar primero -->
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" 
+    crossorigin="crossorigin" as="font">
+    
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+     
+    <!-- PREFETCH -->  <!-- A modo de mejorar el performance el prefetch lo que hace es cargar una página en específico del proyecto a la que creamos que el usuario va ir una vez esté dentro de la página -->
+    <link rel="prefetch" href="cursos.html"> 
+
+
+</head>
+<body>
+<!--------------- HEADER------------- -->
+    <header class="header"> 
+        
+        <div class="contenedor">
+            <div class="barra"> <!-- barra de navegación incluyendo el logo -->
+                <a class="logo" href="index.html"> <!-- Logo  -->
+                    <section class="wrapper">
+                        <div class="top">RUTAS LENGUPÁ</div>
+                        <div class="bottom" aria-hidden="true">RUTAS LENGUPÁ</div>
+                      </section>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Sobre Mí</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="header_texto"> <!-- Texto Header -->
+            <h2 class="no-margin"> Rutas Mágicas por Lengupá</h2>
+            <p class="no-margin" > Mejores rutas y lugares que puedes conocer en Lengupá sobre tu bicicleta.</p>
+        </div>
+    </header>
+<!-- ----------CONTENIDO BLOG --------- -->
+    <div class="contenedor contenido-principal"> 
+        <main class="blog">
+            <h3>Nuestro Blog</h3>
+
+            <article class="entrada"> <!-- Recordar que cuando se tiene un blog, las entradas para dicho blog deben ir en un article -->
+                <div class="entrada__imagen">
+
+                    <!-- ///CODIGO PARA QUE UTILIZR FORMATO WEPB QUE ES MÁS LIVIANO QUE JPG/// -->
+          <!--      <picture>
+                        <source srcset="img/RutaLengupa.webp" type="image/wepb">
+                        <img  class="entrada__imagen-1" src="img/RutaLengupa.jpg" alt="imagen blog" loading="lazy">               
+                    </picture> --> 
+                     <img  class="entrada__imagen-1" src="img/RutaLengupa.webp" alt="imagen blog" loading="lazy">  <!-- loading lazy sirve para mejorar el performance de la página haciendo que las imágenes se descarguen a medida que se necesitan, cuando se hace scroll -->                   
+
+     
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Mejores rutas Lengupá</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Explicabo consequuntur nisi illum magni libero! 
+                       Doloribus suscipit perspiciatis aperiam saepe, sit id facilis magnam nisi. 
+                       Alias doloribus illum at fugiat adipisci?</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Más...</a>
+                </div>
+            </article>  
+            <article class="entrada"> <!-- Recordar que cuando se tiene un blog, las entradas para dicho blog deben ir en un article -->
+                <div class="entrada__imagen">
+                    <img class="entrada__imagen-2" src="img/RutaLengupa.webp" alt="imagen blog" loading="lazy">
+                </div>
+                
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Ruta Campohermoso</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Explicabo consequuntur nisi illum magni libero! 
+                       Doloribus suscipit perspiciatis aperiam saepe, sit id facilis magnam nisi. 
+                       Alias doloribus illum at fugiat adipisci?</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Más...</a>
+                </div>
+            </article> 
+            <article class="entrada"> <!-- Recordar que cuando se tiene un blog, las entradas para dicho blog deben ir en un article -->
+                <div class="entrada__imagen">
+                    <img class="entrada__imagen-3" src="img/RutaLengupa.webp" alt="imagen blog" loading="lazy">
+                </div>
+                
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Ruta San Eduardo</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Explicabo consequuntur nisi illum magni libero! 
+                       Doloribus suscipit perspiciatis aperiam saepe, sit id facilis magnam nisi. 
+                       Alias doloribus illum at fugiat adipisci?</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Más...</a>
+                </div>
+            </article> 
+            <article class="entrada"> <!-- Recordar que cuando se tiene un blog, las entradas para dicho blog deben ir en un article -->
+                <div class="entrada__imagen">
+                    <img class="entrada__imagen-4" src="img/RutaLengupa.webp" alt="imagen blog" loading="lazy">
+                </div>
+                
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Ruta al perico</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Explicabo consequuntur nisi illum magni libero! 
+                       Doloribus suscipit perspiciatis aperiam saepe, sit id facilis magnam nisi. 
+                       Alias doloribus illum at fugiat adipisci?</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Más...</a>
+                </div>
+            </article> 
+        </main>
+        <aside class="sidebar"> <!-- Los sidebar o columnas de contenido mas pequeñas deben ir siempre en un aside -->
+            <h3>Nuestros Cursos y Talleres</h3>
+
+            <ul class="cursos no-padding"> <!-- Lista no ordenada para crear cada seccion en el sidebar -->
+                <li class="widget-curso">
+                    <h4 class="no-margin">Técnica de Pedaleo</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__informacion">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__informacion">20</span>
+                    </p>
+                    <a href="entrada.html" class="boton boton--primario">Más Información</a>
+                </li>
+                
+                <li class="widget-curso">
+                    <h4 class="no-margin">Downhill</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__informacion">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__informacion">20</span>
+                    </p>
+                    <a href="entrada.html" class="boton boton--primario">Más Información</a>
+                </li>
+
+                <li class="widget-curso">
+                    <h4 class="no-margin">Ciclismo de Ruta</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__informacion">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__informacion">20</span>
+                    </p>
+                    <a href="entrada.html" class="boton boton--primario">Más Información</a>
+                </li>
+
+            </ul>
+        </aside>
+    </div>
+
+    <!-- ------FOOTER------ -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra"> <!-- barra de navegación incluyendo el logo -->
+                <a class="logo" href="index.html"> <!-- Logo  -->
+                    <section class="wrapper">
+                        <div class="top">RUTAS LENGUPÁ</div>
+                        <div class="bottom" aria-hidden="true">RUTAS LENGUPÁ</div>
+                      </section>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Sobre Mí</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+        </div>
+
+    </footer>
+
+    <script src="js/modernizr.js"></script>
+    
+</body>
+</html>
